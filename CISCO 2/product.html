@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCT</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <section class="section1_container">
+        <div class="icon_container">
+            
+                <img
+              src="webex.jpg" class="ak" 
+            />
+            
+          </div>
+        <h1 class="icon_text">
+          Elevate Your Chatting,
+          <br />
+          Simplify Your Life
+        </h1>
+  
+        <p class="icon_text">
+          Discover a seamless world of Professional Services
+          <br />
+          Appointments and Secure Transactions - All in one Place !
+        </p>
+  
+        <div class="service_container">
+          <div class="services">
+            <h2>Connecting with Webex</h2>
+            <div class="image">
+                <img src ="./images/Connecting_webex.jpg" height=97px width=97px>
+            </div>
+            <p>
+                Webex is built for connections. Pair with Cisco Webex Room endpoints for device control and integrate with your favorite third-party apps right your existing workflows to streamline your workday.
+            </p>
+          </div>
+  
+          <div class="services">
+            <h2>Calling in Webex</h2>
+            <div class="image">
+                <img src ="./images/calling_webex.jpg" height=97px width=97px>
+            </div>
+            <p>
+                Enable Calling in Webex to get enterprise-calling features on desktop and mobile devices. Integrated Cisco cloud or on-premises phone systems like UCM or Webex Calling with Cisco MPP phone offer a complete calling experience.
+            </p>
+          </div>
+  
+          <div class="services">
+            <h2>Meeting in Webex</h2>
+            <div class="image"><img src ="./images/Meeting_webex.jpg" height=97px width=97px></div>
+            <p>
+                Meet securely with integrated video, audio, and content sharing on any device. Use smart features to automate meeting tasks and enhance relationships. Features include noise removal and speech enhancement, immersive share, live transcripts and translations with Webex Assistant, and better context with People Insights.
+            </p>
+          </div>
+  
+          <div class="services">
+            <h2>Messaging in Webex</h2>
+            <div class="image">
+                <img src ="./images/Messaging_webex.jpg" height=97px width=97px>
+            </div>
+            <p>
+                Stay engaged, prioritize what matters and keep workflows moving forward with always-on messaging. Show availability with custom presence status, pin or mark messages unread to keep important spaces top of mind.
+            </p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="section2_container">
+        <h3>Services</h3>
+        <h2>
+          Elevate Every Experiences, Simplify <br />
+          Your Everyday Needs
+        </h2>
+  
+        <div class="btn_container">
+          <button class="active_btn">All</button>
+          <button>Communication</button>
+          <button>Lifestyle</button>
+          <button>Shopping</button>
+          <button>Business</button>
+        </div>
+  
+        <div class="content_container">
+          <div class="content">
+            <div class="icon"></div>
+            <h2>Built-in Security</h2>
+            <p>
+                Strong encryption, compliance, and control inside and outside of your organization
+            </p>
+            <button class="btn">More Details <i class="fa-solid fa-angle-right"></i></button>
+          </div>
+          <div class="content">
+            <div class="icon"></div>
+            <h2>Easily Deploy and Manage</h2>
+            <p>
+                Intuitive, with easy provisioning, control, and management of your Webex services
+            </p>
+            <button class="btn">More Details <i class="fa-solid fa-angle-right"></i></button>
+          </div>
+          <div class="content">
+            <div class="icon"></div>
+            <h2>Made to fit</h2>
+            <p>
+                From classroom to boardroom, to the front line, Webex is customized for your environment and workstyles
+            </p>
+            <button class="btn">More Details <i class="fa-solid fa-angle-right"></i></button>
+          </div>
+          <div class="content">
+            <div class="icon"></div>
+            <h2>Powered by Webex</h2>
+            <p>
+                Built on the industry-trusted global Webex platform
+            </p>
+            <button class="btn">More Details <i class="fa-solid fa-angle-right"></i></button>
+          </div>
+          <div class="content">
+            <div class="icon"></div>
+            <h2>Language Friendly</h2>
+            <p>
+                Webex offers real-time translations from English into 100+ languages.
+            </p>
+            <button class="btn">More Details <i class="fa-solid fa-angle-right"></i></button>
+          </div>
+          <div class="content">
+            <div class="icon"></div>
+            <h2>One Stop Solution</h2>
+            <p>
+                One easy-to-use app to call, meet, message and get work done.
+            </p>
+            <button class="btn">More Details <i class="fa-solid fa-angle-right"></i></button>
+          </div>
+        
+        </div>
+      </section>
+    
+
+    <script>
+       
+        let products = null;
+        
+        fetch('products.json')
+            .then(response => response.json())
+            .then(data => {
+                products = data;
+                addDataToHTML();
+        })
+
+        function addDataToHTML(){
+    
+        let listProductHTML = document.querySelector('.listProduct');
+
+        if(products != null) 
+        {
+            products.forEach(product => {
+                let newProduct = document.createElement('a');
+                newProduct.href = '/detail.html?id=' + product.id;
+                newProduct.classList.add('item');
+                newProduct.innerHTML = 
+                `<img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="price">$${product.price}</div>`;
+                listProductHTML.appendChild(newProduct);
+
+            });
+        }
+    }
+
+    </script>
+</body>
+</html>

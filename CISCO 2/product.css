@@ -1,0 +1,246 @@
+body{
+    margin: 0;
+    font-family: Poppins;
+    background-color: black;
+    color: white;
+    
+}
+
+.section1_container,
+.section2_container {
+  padding: 1rem 4rem;
+}
+.ak{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 440px;
+}
+.section1_container .icon_container{
+    size: 2px;
+
+    margin: 10px;
+}
+ .section1_container .icon_container, .icon_text{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+} 
+
+.section1_container h1 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.section1_container p {
+  color: rgb(239, 232, 232);
+  margin-bottom: 2rem;
+}
+
+.section1_container .service_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
+
+.section1_container .services {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.services h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.services .image {
+    height: 100px;
+    width: 100px;
+    border-radius: 12px;
+    aspect-ratio : 1/1;
+    border-radius: 1rem;
+}
+
+.services p {
+  font-size: medium;
+  margin: 0;
+}
+
+.section2_container h3 {
+  color: gray;
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.section2_container h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.section2_container .btn_container {
+  display: flex;
+  column-gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn_container button {
+  background-color: white;
+  padding: 6px 20px;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 32px;
+  font-weight: 500;
+  transition: 0.35s ease-in;
+}
+
+.btn_container .active_btn,
+.btn_container button:hover {
+  background-color: #1264ff;
+  color: white;
+  border: 1px solid #1264ff;
+}
+
+.section2_container .content_container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.section2_container .content_container .content {
+  width: calc(30.333% - 0.4rem);
+  background-color: #f6f6f6;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 430px) {
+  .nav_container {
+    padding: 0 2rem;
+  }
+
+  .nav_container .link_container {
+    position: relative;
+    border: 1px solid red;
+  }
+
+  .link_container ul {
+    position: fixed;
+    border: 1px solid red;
+    left: 0%;
+    top: 5rem;
+    width: 100vw;
+    height: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.5s ease-in;
+    overflow: hidden;
+  }
+  .section1_container,
+  .section2_container {
+    padding: 1rem 2rem;
+  }
+
+  .section1_container .service_container {
+    column-gap: 1rem;
+    overflow-x: scroll;
+  }
+
+  .section1_container .services {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .services h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  .services .image {
+    aspect-ratio: 1/1;
+    background-color: gray;
+    border-radius: 1rem;
+    height: 250px;
+  }
+
+  .services p {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .section2_container h3 {
+    color: gray;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section2_container h2 {
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section2_container .btn_container {
+
+    overflow-x: scroll;
+  }
+
+  .btn_container button {
+    background-color: white;
+    padding: 6px 20px;
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 32px;
+    font-weight: 500;
+    transition: 0.35s ease-in;
+  }
+
+  .btn_container .active_btn,
+  .btn_container button:hover {
+    background-color: #1264ff;
+    color: white;
+    border: 1px solid #1264ff;
+  }
+
+  .section2_container .content_container {
+    row-gap: 1.5rem;
+    column-gap: 0rem;
+  }
+
+  .section2_container .content_container .content {
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .nav_container .link_container {
+    display: flex;
+    align-items: center;
+  }
+}
+.content .btn{
+    background-color: #043791;
+  color: white;
+  border: 1px solid #043791;
+  transition: 0.35s ease-in;
+  border-radius: 10px;
+}
+.content_container p{
+    color:#8babe4;
+}
+.content_container h2{
+    color:#043791;
+}
+.content{
+  background-color: black;
+}
